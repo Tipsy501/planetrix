@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planetrix Business Consultants | Gaborone, Botswana</title>
+    <meta name="description" content="Expert business solutions in Gaborone. Consulting, Tendering, Printing, and Business Support.">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .service-card:hover {
+            transform: translateY(-5px);
+            transition: all 0.3s ease;
+        }
+        .floating-whatsapp {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            z-index: 50;
+            transition: transform 0.3s ease;
+        }
+        .floating-whatsapp:hover {
+            transform: scale(1.1);
+        }
+        .image-overlay {
+            background: linear-gradient(to right, rgba(255,255,255,0.85) 0%, rgba(255,255,255,0.4) 100%);
+        }
+    </style>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        corporate: {
+                            50: '#eff6ff',
+                            100: '#dbeafe',
+                            200: '#bfdbfe',
+                            300: '#93c5fd',
+                            400: '#60a5fa',
+                            500: '#3b82f6',
+                            600: '#2563eb',
+                            700: '#1d4ed8',
+                            800: '#1e40af',
+                            900: '#1e3a8a',
+                        },
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-white text-slate-900 overflow-x-hidden">
+
+    <!-- Navigation -->
+    <nav class="sticky top-0 z-40 w-full bg-white/80 backdrop-blur-md border-b border-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <div class="flex-shrink-0 flex items-center gap-2">
+                    <div class="w-10 h-10 bg-corporate-700 rounded-lg flex items-center justify-center text-white">
+                        <i data-lucide="briefcase" class="w-6 h-6"></i>
+                    </div>
+                    <span class="font-bold text-xl tracking-tight text-corporate-900">Planetrix</span>
+                </div>
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="#about" class="text-sm font-medium text-slate-600 hover:text-corporate-700 transition-colors">About</a>
+                    <a href="#services" class="text-sm font-medium text-slate-600 hover:text-corporate-700 transition-colors">Services</a>
+                    <a href="#why-us" class="text-sm font-medium text-slate-600 hover:text-corporate-700 transition-colors">Why Choose Us</a>
+                    <a href="#contact" class="text-sm font-medium text-slate-600 hover:text-corporate-700 transition-colors">Contact</a>
+                    <a href="https://wa.me/26775180538" target="_blank" class="bg-corporate-700 text-white px-5 py-2.5 rounded-full text-sm font-semibold hover:bg-corporate-800 transition-all shadow-lg shadow-corporate-700/20">
+                        Get Started
+                    </a>
+                </div>
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button type="button" class="text-slate-600 p-2" id="mobile-menu-button">
+                        <i data-lucide="menu" class="w-6 h-6"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div class="hidden md:hidden bg-white border-b border-slate-100" id="mobile-menu">
+            <div class="px-4 pt-2 pb-6 space-y-1">
+                <a href="#about" class="block px-3 py-4 text-base font-medium text-slate-600 hover:bg-slate-50 rounded-md">About</a>
+                <a href="#services" class="block px-3 py-4 text-base font-medium text-slate-600 hover:bg-slate-50 rounded-md">Services</a>
+                <a href="#why-us" class="block px-3 py-4 text-base font-medium text-slate-600 hover:bg-slate-50 rounded-md">Why Choose Us</a>
+                <a href="#contact" class="block px-3 py-4 text-base font-medium text-slate-600 hover:bg-slate-50 rounded-md">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative py-20 lg:py-32 overflow-hidden min-h-[80vh] flex items-center">
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=1200&q=80" alt="African Business Professional" class="w-full h-full object-cover" referrerpolicy="no-referrer">
+            <div class="absolute inset-0 image-overlay"></div>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="max-w-3xl">
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-corporate-100 text-corporate-700 text-xs font-bold uppercase tracking-wider mb-6">
+                    <span class="relative flex h-2 w-2">
+                        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-corporate-400 opacity-75"></span>
+                        <span class="relative inline-flex rounded-full h-2 w-2 bg-corporate-600"></span>
+                    </span>
+                    Gaborone's Trusted Partner
+                </div>
+                <h1 class="text-4xl md:text-6xl font-extrabold text-slate-900 leading-tight mb-6">
+                    Expert Business Solutions That <span class="text-corporate-700">Drive Results</span>
+                </h1>
+                <p class="text-lg md:text-xl text-slate-800 mb-10 leading-relaxed font-semibold">
+                    We help businesses improve performance, win tenders, and grow through strategic consulting and support services tailored for the Botswana market.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="https://wa.me/26775180538" target="_blank" class="inline-flex items-center justify-center gap-2 bg-corporate-700 text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-corporate-800 transition-all shadow-xl shadow-corporate-700/25 group">
+                        <i data-lucide="message-circle" class="w-5 h-5"></i>
+                        Chat on WhatsApp
+                        <i data-lucide="arrow-right" class="w-5 h-5 group-hover:translate-x-1 transition-transform"></i>
+                    </a>
+                    <a href="#services" class="inline-flex items-center justify-center gap-2 bg-white border-2 border-slate-200 text-slate-700 px-8 py-4 rounded-xl font-bold text-lg hover:border-corporate-700 hover:text-corporate-700 transition-all">
+                        Our Services
+                    </a>
+                </div>
+                <div class="mt-12 flex items-center gap-6 text-slate-700">
+                    <div class="flex items-center gap-2">
+                        <i data-lucide="check-circle-2" class="w-5 h-5 text-emerald-600"></i>
+                        <span class="text-sm font-bold">Professional</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <i data-lucide="check-circle-2" class="w-5 h-5 text-emerald-600"></i>
+                        <span class="text-sm font-bold">Reliable</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <i data-lucide="check-circle-2" class="w-5 h-5 text-emerald-600"></i>
+                        <span class="text-sm font-bold">Fast Turnaround</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div class="relative">
+                    <div class="aspect-square rounded-3xl overflow-hidden shadow-2xl">
+                        <img src="https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?auto=format&fit=crop&w=800&q=80" alt="African Business Meeting" class="w-full h-full object-cover" referrerpolicy="no-referrer">
+                    </div>
+                    <div class="absolute -bottom-6 -right-6 bg-corporate-700 text-white p-8 rounded-2xl shadow-xl hidden md:block">
+                        <p class="text-3xl font-bold mb-1">100%</p>
+                        <p class="text-sm text-corporate-100 font-medium uppercase tracking-wider">Client Focused</p>
+                    </div>
+                </div>
+                <div>
+                    <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-6">About Planetrix Business Consultants</h2>
+                    <p class="text-lg text-slate-600 leading-relaxed mb-8">
+                        Planetrix Business Consultants is a Gaborone-based firm specializing in business consulting, tendering services, and administrative support. We help organizations identify opportunities and implement effective solutions that lead to sustainable growth.
+                    </p>
+                    <p class="text-lg text-slate-600 leading-relaxed mb-8">
+                        Our deep understanding of the local business landscape in Botswana allows us to provide insights that are both practical and impactful. Whether you're a startup looking to register or an established firm seeking to win major tenders, we are here to support your journey.
+                    </p>
+                    <div class="grid grid-cols-2 gap-6">
+                        <div class="p-4 bg-white rounded-xl border border-slate-100 shadow-sm">
+                            <h4 class="font-bold text-corporate-700 mb-1 text-base">Local Expertise</h4>
+                            <p class="text-sm text-slate-500">Deep knowledge of Gaborone's business ecosystem.</p>
+                        </div>
+                        <div class="p-4 bg-white rounded-xl border border-slate-100 shadow-sm">
+                            <h4 class="font-bold text-corporate-700 mb-1 text-base">Full Support</h4>
+                            <p class="text-sm text-slate-500">From registration to complex tendering.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Our Comprehensive Services</h2>
+                <p class="text-lg text-slate-600">Tailored solutions designed to meet the unique needs of your business and drive growth in Botswana.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="service-card p-8 bg-white rounded-2xl border border-slate-100 shadow-sm hover:shadow-xl hover:border-corporate-100 transition-all">
+                    <div class="w-14 h-14 bg-corporate-50 rounded-xl flex items-center justify-center text-corporate-700 mb-6">
+                        <i data-lucide="trending-up" class="w-8 h-8"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">Business Consulting</h3>
+                    <p class="text-slate-600 mb-6">Strategic planning, HR management, marketing strategies, and financial advisory to optimize your operations.</p>
+                    <ul class="space-y-2 text-sm text-slate-500">
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-corporate-600"></i> Strategy & Growth</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-corporate-600"></i> HR & Marketing</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-corporate-600"></i> Financial Planning</li>
+                    </ul>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="service-card p-8 bg-white rounded-2xl border border-slate-100 shadow-sm hover:shadow-xl hover:border-corporate-100 transition-all">
+                    <div class="w-14 h-14 bg-corporate-50 rounded-xl flex items-center justify-center text-corporate-700 mb-6">
+                        <i data-lucide="file-text" class="w-8 h-8"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">Tendering Services</h3>
+                    <p class="text-slate-600 mb-6">Expert assistance in identifying, preparing, and submitting winning tender documents for government and private sectors.</p>
+                    <ul class="space-y-2 text-sm text-slate-500">
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-corporate-600"></i> Tender Identification</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-corporate-600"></i> Document Preparation</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-corporate-600"></i> Submission Support</li>
+                    </ul>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="service-card p-8 bg-white rounded-2xl border border-slate-100 shadow-sm hover:shadow-xl hover:border-corporate-100 transition-all">
+                    <div class="w-14 h-14 bg-corporate-50 rounded-xl flex items-center justify-center text-corporate-700 mb-6">
+                        <i data-lucide="building-2" class="w-8 h-8"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">Company Registration</h3>
+                    <p class="text-slate-600 mb-6">Hassle-free company registration and secretarial services to ensure your business is fully compliant with local laws.</p>
+                    <ul class="space-y-2 text-sm text-slate-500">
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-corporate-600"></i> CIPA Registration</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-corporate-600"></i> Secretarial Services</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-corporate-600"></i> Compliance Filing</li>
+                    </ul>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="service-card p-8 bg-white rounded-2xl border border-slate-100 shadow-sm hover:shadow-xl hover:border-corporate-100 transition-all">
+                    <div class="w-14 h-14 bg-corporate-50 rounded-xl flex items-center justify-center text-corporate-700 mb-6">
+                        <i data-lucide="printer" class="w-8 h-8"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">Printing Services</h3>
+                    <p class="text-slate-600 mb-6">High-quality professional printing for all your business needs, from business cards to large-scale documents.</p>
+                    <ul class="space-y-2 text-sm text-slate-500">
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-corporate-600"></i> Business Stationery</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-corporate-600"></i> Marketing Materials</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-corporate-600"></i> Large Format Printing</li>
+                    </ul>
+                </div>
+
+                <!-- Service 5 -->
+                <div class="service-card p-8 bg-white rounded-2xl border border-slate-100 shadow-sm hover:shadow-xl hover:border-corporate-100 transition-all">
+                    <div class="w-14 h-14 bg-corporate-50 rounded-xl flex items-center justify-center text-corporate-700 mb-6">
+                        <i data-lucide="laptop" class="w-8 h-8"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">Electronics & Supplies</h3>
+                    <p class="text-slate-600 mb-6">Reliable supply of business electronics, office equipment, and essential business supplies for your workplace.</p>
+                    <ul class="space-y-2 text-sm text-slate-500">
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-corporate-600"></i> Office Electronics</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-corporate-600"></i> IT Equipment</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-corporate-600"></i> Stationery Supplies</li>
+                    </ul>
+                </div>
+
+                <!-- Service 6 -->
+                <div class="service-card p-8 bg-white rounded-2xl border border-slate-100 shadow-sm hover:shadow-xl hover:border-corporate-100 transition-all">
+                    <div class="w-14 h-14 bg-corporate-50 rounded-xl flex items-center justify-center text-corporate-700 mb-6">
+                        <i data-lucide="help-circle" class="w-8 h-8"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">General Business Support</h3>
+                    <p class="text-slate-600 mb-6">Comprehensive administrative and operational support to help you focus on what you do best—running your business.</p>
+                    <ul class="space-y-2 text-sm text-slate-500">
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-corporate-600"></i> Admin Support</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-corporate-600"></i> Operational Advice</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-corporate-600"></i> Problem Solving</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section id="why-us" class="py-20 bg-corporate-900 text-white overflow-hidden relative">
+        <div class="absolute top-0 right-0 w-1/3 h-full bg-corporate-800/50 skew-x-12 translate-x-1/2"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div>
+                    <h2 class="text-3xl md:text-4xl font-bold mb-8">Why Partner With Planetrix?</h2>
+                    <div class="space-y-8">
+                        <div class="flex gap-6">
+                            <div class="flex-shrink-0 w-12 h-12 bg-corporate-700 rounded-full flex items-center justify-center">
+                                <i data-lucide="award" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-bold mb-2">Professional & Reliable Service</h4>
+                                <p class="text-corporate-200">We maintain the highest standards of professionalism in every interaction and deliver on our promises.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-6">
+                            <div class="flex-shrink-0 w-12 h-12 bg-corporate-700 rounded-full flex items-center justify-center">
+                                <i data-lucide="layers" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-bold mb-2">Wide Range of Solutions</h4>
+                                <p class="text-corporate-200">From consulting to printing, we offer a one-stop-shop for all your business support needs.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-6">
+                            <div class="flex-shrink-0 w-12 h-12 bg-corporate-700 rounded-full flex items-center justify-center">
+                                <i data-lucide="zap" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-bold mb-2">Fast Turnaround</h4>
+                                <p class="text-corporate-200">We understand that time is money. Our processes are optimized for speed without compromising quality.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-6">
+                            <div class="flex-shrink-0 w-12 h-12 bg-corporate-700 rounded-full flex items-center justify-center">
+                                <i data-lucide="users" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-bold mb-2">Customer-Focused Approach</h4>
+                                <p class="text-corporate-200">Your success is our success. We tailor our services to meet your specific business objectives.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative hidden lg:block">
+                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&q=80" alt="Confident African Business Leader" class="rounded-3xl shadow-2xl border-4 border-corporate-700/30" referrerpolicy="no-referrer">
+                    <div class="absolute -top-10 -left-10 w-32 h-32 bg-corporate-700/30 rounded-full blur-3xl"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-white rounded-3xl overflow-hidden shadow-2xl border border-slate-100">
+                <div class="grid lg:grid-cols-2">
+                    <div class="p-8 md:p-16">
+                        <h2 class="text-3xl font-bold text-slate-900 mb-8 text-center lg:text-left">Get In Touch</h2>
+                        <div class="space-y-8">
+                            <div class="flex items-start gap-4">
+                                <div class="w-12 h-12 bg-corporate-50 rounded-xl flex items-center justify-center text-corporate-700 flex-shrink-0">
+                                    <i data-lucide="map-pin" class="w-6 h-6"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-slate-900">Location</h4>
+                                    <p class="text-slate-600">Gaborone, Botswana</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-4">
+                                <div class="w-12 h-12 bg-corporate-50 rounded-xl flex items-center justify-center text-corporate-700 flex-shrink-0">
+                                    <i data-lucide="phone" class="w-6 h-6"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-slate-900">Phone</h4>
+                                    <p class="text-slate-600">+267 75 180 538</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-4">
+                                <div class="w-12 h-12 bg-corporate-50 rounded-xl flex items-center justify-center text-corporate-700 flex-shrink-0">
+                                    <i data-lucide="clock" class="w-6 h-6"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-slate-900">Business Hours</h4>
+                                    <p class="text-slate-600">Monday – Saturday: 8am – 6pm</p>
+                                    <p class="text-slate-600">Sunday: Closed</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-12">
+                            <a href="https://wa.me/26775180538" target="_blank" class="inline-flex items-center justify-center gap-3 bg-emerald-500 text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-emerald-600 transition-all shadow-lg shadow-emerald-500/20 w-full sm:w-auto">
+                                <i data-lucide="message-circle" class="w-6 h-6"></i>
+                                Contact via WhatsApp
+                            </a>
+                        </div>
+                    </div>
+                    <div class="h-[400px] lg:h-auto bg-slate-200">
+                        <!-- Google Maps Embed (Gaborone) -->
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d58045.1661138243!2d25.867913364404297!3d-24.64411649999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e951221d46ad4a5%3A0xed083c03313338f7!2sGaborone%2C%20Botswana!5e0!3m2!1sen!2s!4v1711194782000!5m2!1sen!2s" 
+                            width="100%" 
+                            height="100%" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-8 border-b border-slate-800 pb-12 mb-12">
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 bg-corporate-700 rounded-lg flex items-center justify-center text-white">
+                        <i data-lucide="briefcase" class="w-6 h-6"></i>
+                    </div>
+                    <div>
+                        <span class="font-bold text-2xl tracking-tight block">Planetrix</span>
+                        <span class="text-xs text-slate-400 uppercase tracking-widest font-medium">Business Consultants</span>
+                    </div>
+                </div>
+                <div class="flex gap-6">
+                    <a href="#" class="text-slate-400 hover:text-white transition-colors"><i data-lucide="facebook" class="w-6 h-6"></i></a>
+                    <a href="#" class="text-slate-400 hover:text-white transition-colors"><i data-lucide="linkedin" class="w-6 h-6"></i></a>
+                    <a href="#" class="text-slate-400 hover:text-white transition-colors"><i data-lucide="instagram" class="w-6 h-6"></i></a>
+                </div>
+            </div>
+            <div class="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-slate-400">
+                <p>&copy; 2026 Planetrix Business Consultants. All rights reserved.</p>
+                <p>Developed by <span class="text-corporate-400 font-medium">Topo Gabolekwe | Topzero Group</span></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/26775180538" target="_blank" class="floating-whatsapp bg-emerald-500 text-white p-4 rounded-full shadow-2xl flex items-center justify-center hover:bg-emerald-600">
+        <i data-lucide="message-circle" class="w-8 h-8"></i>
+    </a>
+
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+
+        // Mobile Menu Toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when clicking a link
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
